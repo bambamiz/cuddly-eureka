@@ -1,0 +1,119 @@
+{% extends "guides/base.html" %}
+
+{% block title %} pog champ {% endblock %}
+
+{% block body %}
+{% load static %}
+
+
+<div class="flexbox-content">
+    <div class="lsidemenu-flexbox">
+            <ul id="leftnavmenu">
+                <li>block that has links</li>
+                <li>home link</li>
+                <li>link link link</li>
+                <li>link link link</li>
+            </ul>
+    </div>
+
+    <div class="flexbox-item">
+
+
+        <h2>Warzone graphic settings</h2>
+        <p>Follow along step by step or mix it up if you'd prefer.</p>
+        
+        <div class="row-dotted-line"></div>
+        
+        <h3>1. Graphics settings</h3>
+        
+        <ul>
+            <li>Display adapter: You might not see an option that matches mine, that's becuase it's specific to your GPU.</li>
+            <li>Screen refresh rate: Set it to the highest refresh rate available on the dropdown. I set it to 144 because thats the highest my monitor goes up to.</li>
+            <li>Display resolution: Set it to your monitors native resolution.</li>
+            <li>Custom framerate limit: Toggle it to Customa and Ideally, you want to set your FPS to match or exceed your monitors refresh rate.</li>
+            <li>Nvidia reflex: If your system supports it I recommend turning it on.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <%= image_tag "warzonesettings6", class: "flexbox-ite"%>
+        </div>
+
+        <h3>1. Continued</h3>
+
+        <ul>
+            <li>Rendering mode: This varies from system to system. Keep in mind that DirectX12 and Performance are still in beta. The only way to know if they will work for you is to try it.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <%= image_tag "fortnitesettings2", class: "flexbox-ite"%>
+        </div>
+
+        <h3>1. Continued</h3>
+
+        <div class="img-flexbox">
+            <%= image_tag "fortnitesettings3", class: "flexbox-ite"%>
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <h3>2. On screen display</h3>
+
+        <ul>
+            <li>I added this section incase you want to be able to view your fps and network stats. 
+            In the picture below, I outlined  how the onscreen statistics look</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <%= image_tag "fortnitesettings5", class: "flexbox-ite"%>
+        </div>
+
+        <h3>2. continued</h3>
+        <ul>
+            <li>To turn on network stats (outlined in yellow in the picture above), go to settings, game ui and toggle on net debug stats.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <%= image_tag "fortnitesettings6", class: "flexbox-ite"%>
+        </div>
+
+        <ul>
+            <li>To turn on the FPS counter (outlined in red in 2nd picture above), go to settings, video and toggle on show FPS.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <%= image_tag "fortnitesettings7", class: "flexbox-ite"%>
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <p>There you have it, you're all set.</p>
+
+        <h4>Summary</h4>
+
+        <p>Settings are preference, usually when selecting your settings you are choosing to prioritize graphics quality or performance.</p>
+        <p>Personally I tend to play on low settings targeting at least 144fps, therefore my settings are performance based.</p>
+
+        <p>
+            Relative information.
+            <ul>
+                <li>Monitor: Asus VG248QE 144hz</li>
+                <li>CPU: Ryzen 3600</li>
+                <li>GPU: 3050</li>
+                <li>RAM: 16gb (2x8gb) 3200</li>
+            </ul>
+        </p>
+
+    </div>
+
+    <div class="rsidemenu-flexbox">
+        <p>block that has links<br>
+        home link<br>
+        link link link<br>
+        link link link<br>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

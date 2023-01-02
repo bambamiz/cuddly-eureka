@@ -1,0 +1,91 @@
+{% extends "guides/base.html" %}
+
+{% block title %} pog champ {% endblock %}
+
+{% block body %}
+{% load static %}
+
+
+
+<div class="flexbox-content">
+
+    <div class="rsidemenu-flexbox">
+        <p>block that has links<br>
+            home link<br>
+            link link link<br>
+            link link link<br>
+        </p>
+    </div>
+
+    <div class="flexbox-item">
+        <div id="home-image" class="img-flexbox">
+            <img src="{% static 'guides/TBD.png' %}" alt="hi!">
+        </div>
+
+        <h2>General settings & changes</h2>
+        <ul>
+            <li>
+                <p>How to set your monitor to it's highest refresh rate.</p>
+                <ul>
+                    <li><a href="{% url 'display_settings' %}" class='hi'>windows 10</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <p>How to disable Xbox gamebar.</p>
+                <ul>
+                    <li><a href="{% url 'gamebar' %}">windows 10</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <p>How to set up adblock on your favorite browser.</p>
+                 <ul>
+                    <li><a href="{% url 'chrome' %}">Chrome</a></li>
+                    <li><a href="{% url 'edge' %}">Edge</a></li>
+                    <li><a href="{% url 'firefox' %}">Firefox</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <p>How to disable autostart for popular applications.</p>
+                <ul>
+                    <li><a href="{% url 'battlenet' %}">Battlenet</a></li>
+                    <li><a href="{% url 'epic' %}">Epic</a></li>
+                    <li><a href="{% url 'steam' %}">Steam</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <p>How to update your GPU drivers</p>
+                <ul>
+                    <li><a href="{% url 'nvidia' %}">nvidia drivers</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Game specific settings</h2>
+        <ul>
+            <li>
+                <p>In game graphic settings</p>
+            </li>
+            <ul>
+                <li><a href="{% url 'apex' %}">Apex</a></li>
+                <li><a href="{% url 'fortnite' %}">Fortnite</a></li>
+                <li><a href="{% url 'warzone' %}">Warzone</a></li>
+            </ul>
+        </ul>
+
+    </div>
+
+    <div class="rsidemenu-flexbox">
+            <p>block that has links<br>
+            home link<br>
+            link link link<br>
+            link link link<br>
+    </div>
+
+</div>
+
+
+{% endblock %}

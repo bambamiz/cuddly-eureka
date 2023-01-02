@@ -1,0 +1,371 @@
+{% extends "guides/base.html" %}
+
+{% block title %} pog champ {% endblock %}
+
+{% block body %}
+{% load static %}
+
+
+<div class="flexbox-content">
+    <div class="lsidemenu-flexbox">
+            <ul id="leftnavmenu">
+                <li>block that has links</li>
+                <li>home link</li>
+                <li>link link link</li>
+                <li>link link link</li>
+            </ul>
+    </div>
+
+    <div class="flexbox-item">
+
+
+        <h2>Nvidia drivers</h2>
+        <p>I'm gonna go over how to download your GPU drivers, uninstall your current drivers using DDU(a tool to uninstall drivers),
+            and install your new drivers</p>
+        <p><strong>note:</strong>using DDU to is optional but recommendedd, I'll denote the with a blue background.</p>
+        <p>At the bottom of the page there is a short explanation on why I recommend updating your drivers.</p>
+
+        <div class="row-dotted-line"></div>
+
+        <h3>1. Download your GPU drivers.</h3>
+        
+        <ul>
+            <li>Open up your browser and go to Nvidia's website <a href="https://www.nvidia.com/download/index.aspx">Nvidia drivers</a></li>
+            <li>You'll notice a few dropdown menus, select the option that matches your GPU and click the search button.</li>
+            <p><strong>note:</strong>if you're unsure which GPU you have *click here*.</p>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/nvidiadrivers1.png' %}" alt="settings">
+            <figcaption>Fig 1</figcaption>
+            </figure>
+        </div>
+
+        <h3>1. Continued</h3>
+
+        <ul>
+            <li>The search results will return the driver for your system, click the green download button to save it to your system.</li>
+            <p><strong>note:</strong>I've included an image below(fig 2), but keep in mind that the version will change as they continue to release drivers.</p>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/nvidiadrivers2.png' %}" alt="settings">
+            <figcaption>Fig 2</figcaption>
+            </figure>
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <div class="bluebackground">
+        <p>(optional)</p>
+        
+        <h3>2.1 Download DDU, restart in safemode and uninstall your current drivers.</h3>
+        <ul>
+            <li> <a href="https://www.guru3d.com/files-details/display-driver-uninstaller-download.html">DDU</a> Download DDU, the version number might be different. e.g image(fig 3)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/DDU1.png' %}" alt="settings">
+            <figcaption>Fig 3</figcaption>
+            </figure>
+        </div>  
+        
+        <ul>
+            <li>Now scroll all the way down to the bottom and you will see a download section. e.g (fig 4)</li>
+            <li>You'll see a few option, select the download link thats from your region. The link will open up a new page where the download will start automatically.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/DDU2.png' %}" alt="settings">
+            <figcaption>Fig 4</figcaption>
+            </figure>
+        </div>
+
+        <h3>2.2 unzip DDU</h3>
+
+
+        <ul>
+            <li>When you download DDU you'll notice it's a zip file, you'll need a tool to unzip it. If you don't already have one*insert link* i recommend. <strong>note: </strong>I will be using 7-zip for this guide.</li>
+            <li>Go to your file explorer (WIN key + e) and go to your downloads folder. You'll see the DDU folder you just downloaded, right click it to pull up a sub menu.</li>
+            <li>On the sub menu you'll want to look for 7-zip then hover over it to pull up yet another sub menu where you'll find the option to open archive, click it. e.g (fig 5)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/dduzip1.png' %}" alt="settings">
+            <figcaption>Fig 5</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>Extract the file ending in exe to your downloads by highlighting it and clicking copy on the top menu. 
+                Next you'll see a new window confirming the location where you'll be copying to. e.g (fig 6).</li>
+                <p><strong>note: </strong>the path should be C:\Users\username\Downloads\ the example below has bamba becuase that is my username.</p>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/dduzip2.png' %}" alt="settings">
+            <figcaption>Fig 6</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>You'll see the new file in your downloads. Like before you're gonna right click it, hover over 7-zip, and open archive. e.g (fig 7)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/ddu3.png' %}" alt="settings">
+            <figcaption>Fig 7</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>In the new window you'll only have one option, highlight it and click copy. A window confirming the location will apear, click ok. e.g (fig 8)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/ddu4.png' %}" alt="settings">
+            <figcaption>Fig 8</figcaption>
+            </figure>
+        </div>
+
+        <h3>2.3 restart in safemode</h3>
+
+        <ul>
+            <li>Next you will restart in safemode and turn off internet access (probably a good idea to open this section on another device) to prevent windows from automatically installing drivers you don't want.</li>
+            <li>On your keyboard press WIN+r keys to open the run menu. In the text box type <span class="textbox">msconfig</span> and click OK. e.g (fig 9)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/runbox.png' %}" alt="settings">
+            <figcaption>Fig 9</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>You will now be on the system configuration window where you will see 5 tabs on top, click the Boot tab.</li>
+            <li>On the boot options check Safe boot and Minimal then click OK. e.g fig(10)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/safemode1.png' %}" alt="settings">
+            <figcaption>Fig 10</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>Lastly you will get a window reminding you to save changes before you restart. Restart whenever you're ready. e.g (fig 11)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/safemode2.png' %}" alt="settings">
+            <figcaption>Fig 11</figcaption>
+            </figure>
+        </div>
+
+        <h3>2.4 uninstall your current drivers</h3>
+
+        <ul>
+            <li>You shuld now be in safemode (confirmed by the text on the corners of your screen.)  Next you will use DDU to remove your current drivers.</li>
+            <li>In your downloads folder you'll see a unzipped folder named DDU, open it and find DDU Display Driver Unintaller, launch it. e.g (fig 12)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/DDU5.png' %}" alt="settings">
+            <figcaption>Fig 12</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>After you launch it you'll see a message about this being the firstime you've used DDU and a options menu. In the options menu you'll see an Nvidia section, make sure they are all selected. e.g (fig 13)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/DDU6.png' %}" alt="settings">
+            <figcaption>Fig 13</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>On the DDU window you just opened you'll see two drop down menus, on the top one select GPU, on the bottom one select Nvidia and select Clean and restart. e.g (fig 14)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/DDU7.png' %}" alt="settings">
+            <figcaption>Fig 14</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>When your pc restarts it might look zoomed in or pixelated this is normal.</li>
+        </ul>
+
+        </div> <!-- blue background -->
+
+        <div class="row-dotted-line"></div>
+
+        <h3>3. Restart in safemode</h3>
+
+        <ul>
+            <li>Next you will restart in safemode and turn off internet access (probably a good idea to open this section on another device) to prevent windows from automatically installing drivers you don't want.</li>
+            <li>On your keyboard press WIN+r keys to open the run menu. In the text box type <span class="textbox">msconfig</span> and click OK. e.g (fig 15)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/runbox.png' %}" alt="settings">
+            <figcaption>Fig 15</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>You will now be on the system configuration window where you will see 5 tabs on top, click the Boot tab.</li>
+            <li>On the boot options check Safe boot and Minimal then click OK. e.g fig(16)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/safemode1.png' %}" alt="settings">
+            <figcaption>Fig 16</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>Lastly you will get a window reminding you to save changes before you restart. Restart whenever you're ready. e.g (fig 17)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/safemode2.png' %}" alt="settings">
+            <figcaption>Fig 17</figcaption>
+            </figure>
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <h3>4. Install your drivers</h3>
+
+        <ul>
+            <li>Go to your file explorer (WIN key + e) and go to your downloads folder. Find the Nvidia driver you just downloaded and double click it. You'll notice windows defender pop up go ahead and click run. e.g (fig 18)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/driver1.png' %}" alt="settings">
+            <figcaption>Fig 18</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>You'll see a window confirming where you would like to save the driver files. Leave it set to it's default location and click OK. When it is done, the Nvidia installation window will open automatically. e.g (fig 19)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/driver2.png' %}" alt="settings">
+            <figcaption>Fig 19</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>The Nvidia installation window will prompt you with their user aggrement, aggree and continue whenever you're ready. e.g (fig 20)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/driver3.png' %}" alt="settings">
+            <figcaption>Fig 20</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>Next you'll be on installation options, select custom and click next. e.g (fig 21)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/driver4.png' %}" alt="settings">
+            <figcaption>Fig 21</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>Now you'll be on custom installation options, select Graphics Driver and HD Audio Driver (audio driver is not necessary, but if you're unsure if you need it go ahead and install it). e.g (fig 22)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/driver6.png' %}" alt="settings">
+            <figcaption>Fig 22</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>Nvidia installer has finished, here you'll have two options Restart now or Restart later, select Restart later. Before you restart you wanna set your pc to boot up normally (you are still set to boot in safemode). e.g (fig 23)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/driver5.png' %}" alt="settings">
+            <figcaption>Fig 23</figcaption>
+            </figure>
+        </div> 
+        
+        <ul>
+            <li>You wanna redo steps from earlier, press WIN+r keys, type msconfig, in the general tab make sure to select Normal startup and click OK. On the confirmation window click restart. e.g (fig 18)</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/sboot4.png' %}" alt="settings">
+            <img src="{% static 'guides/safemode2.png' %}" alt="settings">
+            <figcaption>Fig 18</figcaption>
+            </figure>
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <p>
+            Awesome, you've now have the latest drivers installed.
+        </p>
+
+        <h4>Summary</h4>
+            <p>Adblock is used to block ads on a website. uBlock Origin by defualt does a good job at blocking ads, despite some ads still getting through. 
+            It can affect the functionality on some websites by blocking needed information so I do recommend getting familiar with how to disable it.<br><br>
+            I recommend adblock because it makes browsing safer. Often times when you search without adblock the first link will be a ad link, 
+            and sometimes ad links can be malicious.
+            </p>
+
+        <p>
+            My settings and relative information.
+            <ul>
+                <li>uBlock Origin with defualt settings.</li>
+            </ul>
+        </p>
+
+    </div>
+
+    <div class="rsidemenu-flexbox">
+        <p>block that has links<br>
+        home link<br>
+        link link link<br>
+        link link link<br>
+    </div>
+
+</div>
+
+
+{% endblock %}

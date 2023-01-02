@@ -1,0 +1,100 @@
+{% extends "guides/base.html" %}
+
+{% block title %} ds settings {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<div class="flexbox-content">
+    <div class="lsidemenu-flexbox">
+            <ul id="leftnavmenu">
+                <li>block that has links</li>
+                <li>home link</li>
+                <li>link link link</li>
+                <li>link link link</li>
+            </ul>
+    </div>
+
+    <div class="flexbox-item">
+
+
+        <h2>Display Settings</h2>
+        <p>In this guide I'm gonna go over how to set your monitor to it's highest refresh rate.</p>
+        <p>At the bottom of the page there is a short explanation on what it does and why you would want to.</p>
+        <div class="row-dotted-line"></div>
+
+        <h3>1. Get to your settings</h3>
+        
+        <div class="ul-box">
+            <ul>
+                <li>Press your WIN key, it will pull up your start menu.
+                <li>On the start menu you will see a cog/gear icon click it to get to the settings.
+                <li>When your in the settings menu click on system section.
+            </ul>
+        </div>
+
+        <div class="img-flexbox">
+            <img src="{% static 'guides/settings.png' %}" alt="display settings">
+        </div>
+
+        
+        <div class="row-dotted-line"></div>
+
+        <h3>2. Advanced display settings</h3>
+        <ul>
+            <li>On the left side make sure you're on the Display section.
+            <li>On the right side you'll see a scrolling section, scroll down untill you see a option that says advanced display settings. Click it.
+        </ul>
+
+        <div class="img-flexbox">
+            <img src="{% static 'guides/settings2.png' %}" alt="display settings">
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <h3>3. Setting the refresh rate</h3>
+        <ul>
+            <li>If you're running a multi monitors, on the display dropdown select the monitor that you want to adjust. Else move on to the next bullet point.</li>
+            <li>Next, you'll see a refresh rate dropdown menu near the bottom of the window. Click it and you'll see some numbers ending in (hz). 
+            Select the highest refresh rate your monitor is capable of, if you're not sure what refresh rate your monitor is capable of find out by google searching your monitor's model number usually located on the back.</li>
+            <li><strong>If</strong> the dropdown menu is not giving you an option to select the highest supported refresh rate and you're sure your monitor is capable of higher than your current options, 
+            your conection method (hdmi in older monitors) might not support a higher refresh rate or your monitor might have a gaming or performance option under its own menu you'll have to turn on.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <img src="{% static 'guides/settings3.png' %}" alt="display settings">
+        </div>
+
+        <div class="row-dotted-line"></div>
+
+        <p>
+            That's it, your monitor is now set to its highest refresh rate.
+        </p>
+
+        
+        <h4>Summary</h4>
+            <p>
+                Refresh rate refers to how many times a monitor updates per second (i.e a monitor set to 60hz will refresh it's output 60 times every second even if the following image is the same). 
+                Therefore, a higher refresh rate leads to more responsive gameplay and a smoother feel overall.
+            </p>
+
+        <p>
+            My settings and relative information.
+            <ul>
+                <li>Monitor: asus VG248QE</li>
+                <li>Refresh rate: 144hz</li>
+            </ul>
+        </p>
+
+    </div>
+
+    <div class="rsidemenu-flexbox">
+        <p>block that has links<br>
+        home link<br>
+        link link link<br>
+        link link link<br>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}TODO: ---{% endblock %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+    <!-- uncomment the script to add a nav menu.
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+            }
+      }
+    </script>
+    -->
+    <link rel="stylesheet" href="{% static 'guides/mystyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+  
+  <div>
+    <header>
+      <h1> 
+        <a href="{% url 'index' %}"> GreeNerd</a>
+      </h1>
+    </header>
+  </div>
+  
+  <div class="flexbox-container">
+    {% block body %}
+
+    {% endblock %}
+
+    <div class="footer">
+      <p>missing!@!</p>
+    </div>
+
+  </div>
+
+  </body>
+</html>
