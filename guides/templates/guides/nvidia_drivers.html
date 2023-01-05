@@ -22,7 +22,7 @@
         <h2>Nvidia drivers</h2>
         <p>I'm gonna go over how to download your GPU drivers, uninstall your current drivers using DDU(a tool to uninstall drivers),
             and install your new drivers</p>
-        <p><strong>note:</strong>using DDU to is optional but recommendedd, I'll denote the with a blue background.</p>
+        <p><strong>note:</strong>using DDU is optional but recommendedd, I'll denote the with a blue background.</p>
         <p>At the bottom of the page there is a short explanation on why I recommend updating your drivers.</p>
 
         <div class="row-dotted-line"></div>
@@ -59,11 +59,12 @@
         <div class="row-dotted-line"></div>
 
         <div class="bluebackground">
-        <p>(optional)</p>
+        <p>(optional) Here you will Download DDU, turn of your internet connection, restart in safemode and uninstall your current drivers.</p>
         
-        <h3>2.1 Download DDU, restart in safemode and uninstall your current drivers.</h3>
+        <h3>2.1 Download DDU.</h3>
         <ul>
-            <li> <a href="https://www.guru3d.com/files-details/display-driver-uninstaller-download.html">DDU</a> Download DDU, the version number might be different. e.g image(fig 3)</li>
+            <li> <a href="https://www.guru3d.com/files-details/display-driver-uninstaller-download.html">DDU</a> 
+                Download DDU, the version number might be different. e.g image(fig 3)</li>
         </ul>
 
         <div class="img-flexbox">
@@ -136,11 +137,55 @@
             </figure>
         </div>
 
-        <h3>2.3 restart in safemode</h3>
+        <h3>2.3 turn of your internet connection and restart in safemode</h3>
 
         <ul>
-            <li>Next you will restart in safemode and turn off internet access (probably a good idea to open this section on another device) to prevent windows from automatically installing drivers you don't want.</li>
-            <li>On your keyboard press WIN+r keys to open the run menu. In the text box type <span class="textbox">msconfig</span> and click OK. e.g (fig 9)</li>
+            <li>You wanna turn off internet access (probably a good idea to open this section on another device) to prevent windows from automatically installing drivers you don't want.</li>
+            <li>On your keyboard press WIN+r keys to open the run menu. To launch the control panel, in the text box type <span class="textbox">control</span> and click OK. e.g (fig )</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/control1.png' %}" alt="settings">
+            <figcaption>Fig 9</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>In the control panel select Network and Internet, followed by Network and Sharing Center. e.g (fig )</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/controlall1.png' %}" alt="settings">
+            <figcaption>Fig 9</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>On the left side of the Network and Sharing window you'll see a few options. You want to select Change adapter settings.</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/controlall2.png' %}" alt="settings">
+            <figcaption>Fig 9</figcaption>
+            </figure>
+        </div>
+        
+        <ul>
+            <li>On the next window, you'll want to look for the option that says Ethernet. When you find it right click it and select disable. After doing so your internet will be disabled. e.g (fig )</li>
+        </ul>
+
+        <div class="img-flexbox">
+            <figure>
+            <img src="{% static 'guides/controlall3.png' %}" alt="settings">
+            <figcaption>Fig 9</figcaption>
+            </figure>
+        </div>
+
+        <ul>
+            <li>To restart on safemode, on your keyboard press WIN+r keys to open the run menu. In the text box type <span class="textbox">msconfig</span> and click OK. e.g (fig 9)</li>
         </ul>
 
         <div class="img-flexbox">
@@ -163,7 +208,7 @@
         </div>
 
         <ul>
-            <li>Lastly you will get a window reminding you to save changes before you restart. Restart whenever you're ready. e.g (fig 11)</li>
+            <li>Lastly you will get a window reminding you to save changes before you restart. Save if you need to and go ahead and restart. e.g (fig 11)</li>
         </ul>
 
         <div class="img-flexbox">
@@ -176,7 +221,7 @@
         <h3>2.4 uninstall your current drivers</h3>
 
         <ul>
-            <li>You shuld now be in safemode (confirmed by the text on the corners of your screen.)  Next you will use DDU to remove your current drivers.</li>
+            <li>You should now be in safemode (confirmed by the text on the corners of your screen.)  Next you will use DDU to remove your current drivers.</li>
             <li>In your downloads folder you'll see a unzipped folder named DDU, open it and find DDU Display Driver Unintaller, launch it. e.g (fig 12)</li>
         </ul>
 
@@ -217,16 +262,16 @@
 
         <div class="row-dotted-line"></div>
 
-        <h3>3. Restart in safemode</h3>
+        <h3>3. Disable internet connection</h3>
 
         <ul>
             <li>Next you will restart in safemode and turn off internet access (probably a good idea to open this section on another device) to prevent windows from automatically installing drivers you don't want.</li>
-            <li>On your keyboard press WIN+r keys to open the run menu. In the text box type <span class="textbox">msconfig</span> and click OK. e.g (fig 15)</li>
+            <li>On your keyboard press WIN+r keys to open the run menu. In the text box type <span class="textbox">control</span> and click OK. e.g (fig 15)</li>
         </ul>
 
         <div class="img-flexbox">
             <figure>
-            <img src="{% static 'guides/runbox.png' %}" alt="settings">
+            <img src="{% static 'guides/control1.png' %}" alt="settings">
             <figcaption>Fig 15</figcaption>
             </figure>
         </div>
@@ -281,7 +326,7 @@
         </div>
 
         <ul>
-            <li>The Nvidia installation window will prompt you with their user aggrement, aggree and continue whenever you're ready. e.g (fig 20)</li>
+            <li>The Nvidia installation window will prompt you with their user agrement, agree and continue whenever you're ready. e.g (fig 20)</li>
         </ul>
 
         <div class="img-flexbox">
